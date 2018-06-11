@@ -1,0 +1,140 @@
+/*属性重置*/
+html,div,body,a,ul,li,img,h2,p{margin: 0;padding: 0}
+a{color: #000;text-decoration: none;}
+body{background: #fff;color: #000;font: normal small-caps 12px/1.6 "Microsoft Yahei" }
+img{border: none;}
+li{list-style: none;}
+p{line-height: 1}
+
+/*清除浮动*/
+    .clearfix { *zoom: 1;} 
+    .clearfix:before, .clearfix:after { display: table; line-height: 0; content: "";}
+    .clearfix:after { clear: both;}
+/*the end*/
+
+/*header*/
+.top{width: 100%;height: 3px;background: #c00;}
+.header{width: 1200px;height: 80px;margin: 0 auto;}
+.logo{background:url(../image/logo.png) #c00;cursor: pointer;height: 80px;width: 110px;float: left;}
+.nav{float: right;padding-right: 20px;}
+.nav a{font: 16px "Microsoft Yahei";height: 80px;padding: 0 20px;text-align: center;line-height: 80px;margin: 0 10px;float: left}
+.nav a:hover{background: #c00;font-weight: 600;color: #fff;}
+
+/*banner,绝对定位下的居中，给一个高度，宽度默认100%，四边为0；用text-align水平居中top:0,bottom:0来垂直居中；用此方法必须要有一个高度；*/
+.bannerbox{height: 490px;width: 100%; /* 这里添加相对定位 并把hd里的overflow:hidden放到bannerbox*/position: relative;overflow: hidden}
+.bd{height: 490px;}
+
+
+
+
+
+
+
+/* 批注:给 a设置position为relative 这样每个a里的文字都相对于a标签定位.在执行效果时才不会文字都重叠在一起. */
+.bd a{position: relative;}
+
+
+
+
+
+.bd a img{height:490px;}
+.bd h2{position: absolute;left: 0;right: 0;top:0;bottom: 0; height: 20px;text-align: center; margin: auto;color: #fff;letter-spacing: 0.1em;font-weight: 500;font-size: 20px;}
+
+
+
+
+/*这种方法，不用设置宽高，默认宽度100%，默认高度为子元素大小，将子元素设置为inline-block行内块状元素，用text-align水平居中，子元素如果是inlne-block的话,那text-align:center是起作用的*/
+/*批注: bd 和yuandian 是平级的.父元素focusbox设置position:relative;这里的圆点才能盖到图片上面去.  */
+.yuandian{position: absolute;left: 0;right: 0;bottom: 50px; text-align: center;}
+.yuandian li{display: inline-block;width: 16px;height: 16px;border-radius: 50%;background: #bfb8b6;margin: 0 11px;cursor: pointer;}
+.bannerbox .yuandian li:hover{background-color: #c00;}
+
+/*.yuandian li:nth-child(3){background: #c00;}*/
+/* 当插件切换元素时当前显示哪个,哪个的class为on */
+.yuandian .on{background-color: #c00;}
+
+/*service*/
+.service{margin: 0 auto;width: 1000px;}
+.samll-tit{font-size:18px;font-weight: bold;color:#c00;text-align: center; margin-top: 30px;}
+.big-tit{font-size: 36px;line-height: 2;text-align: center;font-weight: bold;color: #3d3d3d;}
+.service-list{margin-left: -100px;margin-top: 12px;height: 240px;}
+.service-list a{width: 450px;height: 100px;float: left;margin-left: 100px;margin-bottom: 20px;}
+.service-icon{width: 100px;height: 100px;float: left;margin-right: 20px;}
+.service-text{margin-top: 10px;}
+.service-text-tit{font-size: 16px;line-height: 36px;}
+.service-text-tex{font-size: 12px;line-height: 20px;}
+.shangye-icon{background: url(../image/service-icon.png) no-repeat 0 -100px;}
+.gongzhong-icon{background: url(../image/service-icon.png) no-repeat -100px -100px;}
+.bangong-icon{background: url(../image/service-icon.png) no-repeat -200px -100px;}
+.zhuzhai-icon{background: url(../image/service-icon.png) no-repeat -300px -100px;}
+
+.service-list a:hover .service-text{color: #c00;}
+.service-list a:hover .shangye-icon{background: url(../image/service-icon.png) no-repeat;}
+.service-list a:hover .gongzhong-icon{background: url(../image/service-icon.png) no-repeat -100px 0;}
+.service-list a:hover .bangong-icon{background: url(../image/service-icon.png) no-repeat -200px 0;}
+.service-list a:hover .zhuzhai-icon{background: url(../image/service-icon.png) no-repeat -300px 0;}
+
+/*body*/
+/*project*/
+.body{background: #f0f2f4;height: auto;margin-top: 4px;clear: both}
+.project {width: 1000px;margin: 0 auto;}
+.project .title{font:lighter 32px 'Microsoft Yahei';line-height:1;text-align: center;padding-top: 22px;}
+.project .small-title{font:lighter 14px 'Microsoft Yahei';line-height:1;text-align: center;margin-top: 28px;/*这里撑开点距离,好看点*/margin-bottom: 10px;}
+.item{margin-top: 41px;margin-left: -20px;height: 208px;}
+.item-box{width: 236px;height: 208px;margin-left: 19px;float: left;}
+.item-box div{width: 236px;height: 176px;}
+.item-img1{background: url(../image/item-img.jpg) no-repeat }
+.item-img2{background: url(../image/item-img.jpg) no-repeat -236px 0}
+.item-img3{background: url(../image/item-img.jpg) no-repeat -472px 0}
+.item-img4{background: url(../image/item-img.jpg) no-repeat -708px 0}
+.item-box p{width: 236px;padding: 14px 0; text-align: center;font-size:14px ;font-weight: lighter;font-family: 'Microsoft Yahei';}
+.icon{height: 21px;width: 63px; padding: 28px 0;cursor: pointer;margin: 0 auto;}
+.icon a{width: 21px;height: 21px;float: left;}
+
+.icon1{background: url(../image/item-icon.jpg) no-repeat ;margin-right: 21px;}
+.icon2{background: url(../image/item-icon.jpg) no-repeat -21px 0;}
+
+/*news*/
+/*left*/
+.news{width: 1000px;margin:0 auto;height: 280px;}
+.news .left{width: 582px;border-right: 1px #999 solid;float: left;}
+.news-title{font: normal 24px 'Microsoft Yahei';margin: 36px 0 24px;line-height: 1;}
+.news-title .all a{font: normal 14px 'Microsoft Yahei';color: #686868}
+.new-content-tit{color: #333;font: normal 14px 'Microsoft Yahei';line-height: 22px;}
+.left a{padding: 9px 0;display: block;}
+.left a:nth-child(1){padding-top: 0;}
+.left a p:nth-child(2){color: #666;font: normal 12px 'Microsoft Yahei';line-height: 22px;}
+
+/*right*/
+.right{width: 378px;height: auto;float: left;padding-left: 39px;margin-top: -6px;}
+.right p:first-child{color: #000;font: normal 12px 'Microsoft Yahei';line-height: 26px;}
+.right p:nth-child(2){color: #000;font: lighter 24px 'Microsoft Yahei';line-height: 64px;}
+.right p:nth-child(2) span{color: #c00;}
+.right .button{width: 80px;height: 43px;background: #69ba07;border-radius: 5px;border: 0px;color: #fff;font: normal 16px 'Microsoft Yahei';line-height: 40px;position: relative;padding-left: 43px;outline-color:#69ba07;display: block;}
+.right .button{text-shadow: 1px 1px 2px #666;transition: all .2s}
+.right .button::before{content: '';background: url(../image/news-img.png);position: absolute;width: 22px;height: 20px;left: 15px;top: 12px;}
+.right .button:hover{background: #69be07;box-shadow: 0 0 0px 1px #ccc;}
+
+/*footer*/
+.footer{width: 100%;height: 263px;}
+.footer-top{width: 100%;height: 219px;background: #222}
+.footer-topbox{height: 184px;width: 980px;padding-right: 20px;padding-top: 35px;margin: 0 auto;}
+.footer-top-box{float: left;}
+.top-pro{margin-right: 118px;}
+.top-ser{margin-right: 186px;}
+.footer-logo{margin-right: 104px;}
+.top-add{margin-right: 68px;}
+.footer-top-box p{color: #fff;font-size: 16px;font-weight: lighter;font-family: 'Microsoft Yahei';margin-bottom: 12px;}
+.footer .footer-top-box:last-child p{color: #c00;}
+.footer .footer-top-box a{color: #c8c8c8;font-size: 12px;font-weight: normal;font-family: 'Microsoft Yahei';display: block;padding: 6px 0;line-height: 1;}
+.top-tel .top-tel-way{color: #c8c8c8;font-size: 12px;font-weight: normal;font-family: 'Microsoft Yahei';padding: 6px 0;line-height: 1;padding-left: 20px;}
+.top-tel-bd1{background: url(../image/footer-phone.png) no-repeat 0 4px;}
+.top-tel-bd2{background: url(../image/footer-call.png) no-repeat 0 4px;}
+.top-tel-bd3{background: url(../image/footer-position.png) no-repeat 0 4px;}
+.top-tel-bd4{background: url(../image/footer-chat.png) no-repeat 0 4px;}
+
+.footer-bottom{width: 100%;height: 44px;background: #101010;text-align: center;line-height: 44px;color: #a4a4a4;font-size: 12px;font-weight: lighter;font-family: 'Microsoft Yahei';}
+
+
+
+
